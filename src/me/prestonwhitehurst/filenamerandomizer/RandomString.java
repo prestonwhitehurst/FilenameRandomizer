@@ -3,7 +3,6 @@ package com.resmagnus.filenamerandomizer;
 import java.security.SecureRandom;
 
 public class RandomString {
-
     private static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     private static SecureRandom rnd = new SecureRandom();
 
