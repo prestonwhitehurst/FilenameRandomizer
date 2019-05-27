@@ -1,10 +1,10 @@
 package com.resmagnus.filenamerandomizer;
 
-import java.security.SecureRandom;
+import java.util.Random;
 
 public class RandomString {
     private static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    private static SecureRandom rnd = new SecureRandom();
+    private static Random rnd = new Random();
 
     public static String create(int len) {
         StringBuilder sb = new StringBuilder(len);
