@@ -23,11 +23,13 @@ public class FilenameRandomizer extends Application {
         primaryStage.setResizable(false);
         getLastWindowLocation(primaryStage);
         primaryStage.show();
+        
         primaryStage.setOnCloseRequest(e -> {
             e.consume();
             Double x = primaryStage.getX();
             Double y = primaryStage.getY();
             File file = new File(System.getProperty("user.dir") + "/lastWindowLocation.txt");
+            
             try {
                 FileWriter fw = new FileWriter(file);
                 fw.write(x + "\n");
@@ -36,8 +38,10 @@ public class FilenameRandomizer extends Application {
             }catch(IOException ex) {
                 System.out.println("Could not find file");
             }
+            
             primaryStage.close();
         });
+        
     }
 
     public static void main(String[] args) {
@@ -48,6 +52,7 @@ public class FilenameRandomizer extends Application {
         File file = new File(System.getProperty("user.dir") + "/lastWindowLocation.txt");
 
         if(!file.exists()) {
+            
             try {
                 primaryStage.centerOnScreen();
                 FileWriter fw = new FileWriter(file);
@@ -57,9 +62,11 @@ public class FilenameRandomizer extends Application {
             }catch(IOException e) {
                 System.out.println("Could Not Create File");
             }
+            
         }
 
         else {
+            
             try {
                 Scanner scanner = new Scanner(file);
                 String x = scanner.nextLine();
@@ -72,6 +79,7 @@ public class FilenameRandomizer extends Application {
                 System.out.println("File Not Found");
                 primaryStage.centerOnScreen();
             }
+            
         }
     }
 }
