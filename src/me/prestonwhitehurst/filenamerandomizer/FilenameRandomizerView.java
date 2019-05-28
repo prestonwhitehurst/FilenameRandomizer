@@ -1,4 +1,4 @@
-package com.resmagnus.filenamerandomizer;
+package me.prestonwhitehurst.filenamerandomizer;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
