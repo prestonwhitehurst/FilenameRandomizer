@@ -1,4 +1,4 @@
-package com.resmagnus.filenamerandomizer;
+package me.prestonwhitehurst.filenamerandomizer;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
