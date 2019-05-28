@@ -37,19 +37,24 @@ public class FilenameRandomizerController {
         }catch(NullPointerException e) {
             System.out.println("User has cancelled folder selection.");
         }
+        
     }
 
     public void randomizeButtonClicked() {
         File[] files = model.getFiles();
+        
         if(files != null) {
             String fileName;
             String originalExtension;
+            
             for(File file : files) {
+                
                 if(file.isFile()) {
                     fileName = file.getName();
                     originalExtension = FilenameUtils.getExtension(fileName);
                     File newFile = new File(model.getFolder().getAbsolutePath() +
                             "/" + RandomString.create(8) + "." + originalExtension);
+                    
                     try {
                         FileUtils.moveFile(file, newFile);
                     }catch (IOException e) {
@@ -60,8 +65,11 @@ public class FilenameRandomizerController {
                         dialog.getDialogPane().setPrefSize(480, 320);
                         dialog.showAndWait();
                     }
+                    
                 }
+                
             }
+            
             view.getStatusLabel().setText("Files have been successfully renamed");
         }
     }
