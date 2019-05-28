@@ -1,4 +1,4 @@
-package com.resmagnus.filenamerandomizer;
+package me.prestonwhiteuhrst.filenamerandomizer;
 
 import java.io.File;
 
