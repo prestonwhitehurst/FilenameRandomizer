@@ -1,4 +1,4 @@
-package com.resmagnus.filenamerandomizer;
+package me.prestonwhitehurst.filenamerandomizer;
 
 import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
